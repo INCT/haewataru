@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Horming.cs" />
+     <Compile Include="Assets\MoveCircle.cs" />
      <Compile Include="Assets\MovePlayer.cs" />
      <Compile Include="Assets\ObjectCollision.cs" />
   </ItemGroup>
