@@ -18,19 +18,19 @@ public class MovePlayer : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetKey(KeyCode.RightArrow)) 
-			y = 5.0f;
+			y = 2.0f;
 
 		if (Input.GetKey(KeyCode.LeftArrow)) 
-			y = -5.0f;
+			y = -2.0f;
 	
 		transform.Rotate(0, y, 0);
 
 		if (Input.GetKey(KeyCode.UpArrow)) 
-			x = -5.0f;
+			x = -2.0f;
 			
 
 		if (Input.GetKey(KeyCode.DownArrow)) 
-			x = 5.0f;
+			x = 2.0f;
 
 		transform.Rotate(x, 0, 0);
 
@@ -38,8 +38,11 @@ public class MovePlayer : MonoBehaviour {
 		y = 0;
 		z = 0;
 
-		transform.Translate (0,0,0.07f);
+		transform.Translate (0,0,1f);
+		//RotateAngle ();
+	}
 
-
+	void RotateAngle(){
+		Debug.Log (transform.rotation.z);
 	}
 }
