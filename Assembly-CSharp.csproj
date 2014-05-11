@@ -46,10 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Horming.cs" />
+     <Compile Include="Assets\Loser.cs" />
+     <Compile Include="Assets\Models\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\MoveCircle.cs" />
      <Compile Include="Assets\MovePlayer.cs" />
      <Compile Include="Assets\ObjectCollision.cs" />
+     <None Include="Assets\Models\Medieval_House\Info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

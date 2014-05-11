@@ -22,24 +22,24 @@ public class MovePlayer : MonoBehaviour {
 
 		if (Input.GetKey(KeyCode.LeftArrow)) 
 			y = -2.0f;
-	
-		transform.Rotate(0, y, 0);
 
 		if (Input.GetKey(KeyCode.UpArrow)) 
 			x = -2.0f;
 			
-
 		if (Input.GetKey(KeyCode.DownArrow)) 
 			x = 2.0f;
 
-		transform.Rotate(x, 0, 0);
+		if(GameObject.Find("PlayerModel")){
+			transform.Rotate(0, y, 0);
+			transform.Rotate(x, 0, 0);
+
+			transform.Translate (0,0,4f);
+			}
+		//RotateAngle ();
 
 		x = 0;
 		y = 0;
 		z = 0;
-
-		transform.Translate (0,0,1f);
-		//RotateAngle ();
 	}
 
 	void RotateAngle(){
