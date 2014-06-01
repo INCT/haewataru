@@ -52,6 +52,7 @@
      <Compile Include="Assets\Script\MoveCircle.cs" />
      <Compile Include="Assets\Script\MovePlayer.cs" />
      <Compile Include="Assets\Script\ObjectCollision.cs" />
+     <Compile Include="Assets\Script\ScoreKeeper.cs" />
      <Compile Include="Assets\Script\TitleScreen.cs" />
      <None Include="Assets\Models\Medieval_House\Info.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
