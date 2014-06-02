@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GameStarter : MonoBehaviour {
-
+	//
 	public GUISkin skin;
 	public AudioClip countdownSE;
 
