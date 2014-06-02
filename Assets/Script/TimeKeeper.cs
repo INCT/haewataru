@@ -3,13 +3,23 @@ using System.Collections;
 
 public class TimeKeeper : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public GUISkin skin;
+	double time;
+
+	void Update () {
+		time += Time.deltaTime;
+	}
+	void StartGame() {
+		enabled = true;
+		time = 0.0;
+	}
+	void EndGame() {
+		enabled = false;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnGUI() {
+	GUI.skin = skin;
+	Rect rect = new Rect(0, 0, Screen.width, Screen.height);
+	GUI.Label(rect, "Time: " + time.ToString(), "Time");
 	}
 }
