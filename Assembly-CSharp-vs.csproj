@@ -51,6 +51,7 @@
      <Compile Include="Assets\Models\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Script\GameOverScreen.cs" />
      <Compile Include="Assets\Script\GameStarter.cs" />
+     <Compile Include="Assets\Script\Goal.cs" />
      <Compile Include="Assets\Script\Loser.cs" />
      <Compile Include="Assets\Script\MoveCircle.cs" />
      <Compile Include="Assets\Script\MovePlayer.cs" />
