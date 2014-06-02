@@ -5,6 +5,7 @@ public class GameStarter : MonoBehaviour {
 
 	public GUISkin skin;
 	public AudioClip countdownSE;
+
 	float timer = 3.5f;
 
 	void Start () {
