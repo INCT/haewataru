@@ -16,7 +16,7 @@ public class ObjectCollision : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
 		Debug.Log ("Collisioned!!");
-		Destroy (gameObject);
+		GameObject.FindWithTag("Player").BroadcastMessage("ApplyDamage");
 	}
 
 	//void OnCpllision

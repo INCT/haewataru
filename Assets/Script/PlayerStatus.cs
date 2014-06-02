@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class PlayerStatus : MonoBehaviour {
-	int score = 0;
 	//Effects
 	public GameObject plusFx;
 	public GameObject minusFx;
@@ -15,11 +14,13 @@ public class PlayerStatus : MonoBehaviour {
 	public GUISkin skin;
 	//プレイヤーのステータス
 	string state;
+	float time;
+	int score;
+	int windows;
 
 	void Update () {
-		GameObject.FindWithTag("GameController").SendMessage("ScoreKeeper",score);
+		time += Time.deltaTime;
 	}
-
 	void OnGUI() {
 		GUI.skin = skin;
 		int sw = Screen.width;
@@ -44,13 +45,15 @@ public class PlayerStatus : MonoBehaviour {
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"Death","message");
 		}
+		GUI.Label(new Rect(0,0, sw / 2,sh/ 4),"SCORE: "+ score.ToString(), "Score");
+		GUI.Label(new Rect(0, 0, sw, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
 	}
 	void PlusScore(int amount) {
 		score += amount;
 		state = "Plus";
 		Instantiate(plusFx, transform.position, transform.rotation);
 		audio.PlayOneShot(plusSE);
-		StartCoroutine("processing");
+		StartCoroutine("Processing");
 		state = "";
 	}
 	void MinusScore(int amount) {
@@ -58,20 +61,44 @@ public class PlayerStatus : MonoBehaviour {
 		state = "Minus";
 		Instantiate(minusFx, transform.position, transform.rotation);
 		audio.PlayOneShot(minusSE);
-		StartCoroutine("processing");
+		StartCoroutine("Processing");
 		state = "";
 	}
-	void GameOver() {
-		Instantiate(deathFx, transform.position, transform.rotation);
-		audio.PlayOneShot(deathSE);
-		GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
-		Destroy(gameObject);
-		enabled = false;
+	void Goal() {
+		windows += 1;
+		score += 100;
+		state = "Through";
+		Instantiate(plusFx, transform.position, transform.rotation);
+		audio.PlayOneShot(plusSE);
+		StartCoroutine("Processing");
+		state = "";
 	}
-	IEnumerator processing() {
+	IEnumerator Processing() {
 		yield return new WaitForSeconds(3.0f);
 	}
+	void ApplyDamage() {
+		if (state != "Death") {
+			rigidbody.AddForce(Vector3.back * 15.0f, ForceMode.Impulse);
+			Instantiate(deathFx, transform.position, transform.rotation);
+			audio.PlayOneShot(deathSE);
+			GameObject.FindWithTag("Player").BroadcastMessage("EndGame");
+			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
+			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
+			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
+			//Destroy(gameObject);
+			enabled = false;
+			state ="Death";
+		}
+	}
+	IEnumerator KillDelay() {
+		yield return new WaitForSeconds(0.4f);
+	}
+
+
 	void StartGame() {
 		enabled = true;
+		time = 0.0f;
+		score =0;
+		windows = 0;
 	}
 }
