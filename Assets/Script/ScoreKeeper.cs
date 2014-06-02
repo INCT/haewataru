@@ -2,14 +2,11 @@
 using System.Collections;
 
 public class ScoreKeeper : MonoBehaviour {
+	public GUISkin skin;
+	int score;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnGUI() {
+		GUI.skin = skin;
+		GUI.Label(new Rect(0,0, Screen.width / 2,Screen.height / 4),"SCORE: "+ score.ToString(), "score");
 	}
 }
