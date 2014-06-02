@@ -55,8 +55,10 @@
      <Compile Include="Assets\Script\ObjectCollision.cs" />
      <Compile Include="Assets\Script\ScoreKeeper.cs" />
      <Compile Include="Assets\Script\TitleScreen.cs" />
+     <None Include="Assets\Script\test2.txt" />
      <None Include="Assets\Models\Medieval_House\Info.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Script\test3.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
