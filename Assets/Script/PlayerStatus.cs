@@ -64,9 +64,9 @@ public class PlayerStatus : MonoBehaviour {
 		StartCoroutine("Processing");
 		state = "";
 	}
-	void WindowThrough() {
+	void Goal() {
 		windows += 1;
-		score += 20;
+		score += 100;
 		state = "Through";
 		Instantiate(plusFx, transform.position, transform.rotation);
 		audio.PlayOneShot(plusSE);
@@ -78,12 +78,13 @@ public class PlayerStatus : MonoBehaviour {
 	}
 	void ApplyDamage() {
 		if (state != "Death") {
-
 			rigidbody.AddForce(Vector3.back * 15.0f, ForceMode.Impulse);
 			Instantiate(deathFx, transform.position, transform.rotation);
 			audio.PlayOneShot(deathSE);
 			GameObject.FindWithTag("Player").BroadcastMessage("EndGame");
 			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
+			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
+			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
 			//Destroy(gameObject);
 			enabled = false;
 			state ="Death";
@@ -93,7 +94,7 @@ public class PlayerStatus : MonoBehaviour {
 		yield return new WaitForSeconds(0.4f);
 	}
 
-	
+
 	void StartGame() {
 		enabled = true;
 		time = 0.0f;

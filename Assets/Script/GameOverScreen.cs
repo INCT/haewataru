@@ -18,12 +18,17 @@ public class GameOverScreen : MonoBehaviour {
 		state = "End Game";
 		StartCoroutine("processing");
 	}
-
 	IEnumerator processing() {
 		yield return new WaitForSeconds(3.0f);
 		state = "";
 		yield return new WaitForSeconds(0.5f);
 		state = "Show Score";
+	}
+	void Score(int result) {
+		score = result;
+	}
+	void Windows(int result) {
+		windows = result;
 	}
 
 	void OnGUI() {
