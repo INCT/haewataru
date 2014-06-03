@@ -45,6 +45,11 @@ public class PlayerStatus : MonoBehaviour {
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"Death","message");
 		}
+		if (state == "Goal") {
+			alpha -= dim;
+			GUI.color = new Color(0,1,0, alpha);
+			GUI.Label(rect,"GOAL","message");
+		}
 		GUI.Label(new Rect(0,0, sw / 2,sh/ 4),"SCORE: "+ score.ToString(), "Score");
 		GUI.Label(new Rect(0, 0, sw, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
 	}
@@ -67,7 +72,7 @@ public class PlayerStatus : MonoBehaviour {
 	void Goal() {
 		windows += 1;
 		score += 100;
-		state = "Through";
+		state = "Goal";
 		Instantiate(plusFx, transform.position, transform.rotation);
 		audio.PlayOneShot(plusSE);
 		StartCoroutine("Processing");
