@@ -12,7 +12,7 @@ public class TitleScreen : MonoBehaviour {
 		Rect rect = new Rect(Screen.width / 4,Screen.height / 2, Screen.width/2, Screen.height / 4);
 		bool isClicked = GUI.Button(rect, "GAME START!");
 		if (isClicked) {
-			Application.LoadLevel("Main");
+			Application.LoadLevel("Stage1");
 		}
 	}
 }
