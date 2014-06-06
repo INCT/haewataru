@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Goal : MonoBehaviour {
+	public int num;
 	bool cleared;
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,8 @@ public class Goal : MonoBehaviour {
 	}
 	void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag == "PlayerModel") {
-			//暗転して次のレベルへ
+			//暗転して次のステージへ
+			Application.LoadLevel("Stage"+num);
 		}
 	}
 }
