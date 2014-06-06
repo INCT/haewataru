@@ -49,6 +49,7 @@
      <Compile Include="Assets\Elementals\Scripts\OrbitCamera.cs" />
      <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\Models\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Script\CameraFade.cs" />
      <Compile Include="Assets\Script\GameOverScreen.cs" />
      <Compile Include="Assets\Script\GameStarter.cs" />
      <Compile Include="Assets\Script\Goal.cs" />

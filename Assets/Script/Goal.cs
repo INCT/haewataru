@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Goal : MonoBehaviour {
-	public int num;
+	public int NextStageNum;
 	bool cleared;
 	// Use this for initialization
 	void Start () {
@@ -16,8 +16,10 @@ public class Goal : MonoBehaviour {
 	}
 	void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag == "PlayerModel") {
-			//暗転して次のステージへ
-			Application.LoadLevel("Stage"+num);
+			//カメラフェードクラスを使用
+			CameraFade.StartAlphaFade(Color.white,false, 1f, 1f, () => {
+				Application.LoadLevel("Stage"+NextStageNum);
+				});
 		}
 	}
 }
