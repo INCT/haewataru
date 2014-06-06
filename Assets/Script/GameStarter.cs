@@ -16,11 +16,11 @@ public class GameStarter : MonoBehaviour {
 	void Update () {
 
 		timer -= Time.deltaTime;
-	
+
 		if (timer <= 0.0) {
 			//BroadcastMessage("StartGame");
 			GameObject.FindWithTag("Player").BroadcastMessage("StartGame");
-			GameObject.FindWithTag("MoveObject").BroadcastMessage("StartGame");
+			//GameObject.FindWithTag("MoveObject").BroadcastMessage("StartGame");
 			enabled = false;
 		}
 	}
