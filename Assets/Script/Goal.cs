@@ -4,7 +4,6 @@ using System.Collections;
 public class Goal : MonoBehaviour {
 	public int NextStageNum;
 	bool cleared;
-	// Use this for initialization
 	void Start () {
 		cleared = false;
 	}
