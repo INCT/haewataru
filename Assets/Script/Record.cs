@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScoreKeeper : MonoBehaviour {
+public class Record : MonoBehaviour {
 	public GUISkin skin;
 	int score = 0;
 
