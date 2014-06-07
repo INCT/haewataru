@@ -59,7 +59,7 @@
      <Compile Include="Assets\Script\MovePlayer.cs" />
      <Compile Include="Assets\Script\ObjectCollision.cs" />
      <Compile Include="Assets\Script\PlayerStatus.cs" />
-     <Compile Include="Assets\Script\ScoreKeeper.cs" />
+     <Compile Include="Assets\Script\Record.cs" />
      <Compile Include="Assets\Script\TimeKeeper.cs" />
      <Compile Include="Assets\Script\TitleScreen.cs" />
      <None Include="Assets\Models\Medieval_House\Info.txt" />
