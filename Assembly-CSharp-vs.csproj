@@ -52,6 +52,7 @@
      <Compile Include="Assets\Script\CameraFade.cs" />
      <Compile Include="Assets\Script\GameOverScreen.cs" />
      <Compile Include="Assets\Script\GameStarter.cs" />
+     <Compile Include="Assets\Script\Generator.cs" />
      <Compile Include="Assets\Script\Goal.cs" />
      <Compile Include="Assets\Script\Loser.cs" />
      <Compile Include="Assets\Script\MoveCircle.cs" />
