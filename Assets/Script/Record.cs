@@ -3,7 +3,11 @@ using System.Collections;
 
 public class ScoreKeeper : MonoBehaviour {
 	public GUISkin skin;
-	int score;
+	int score = 0;
+
+	void Awake() {
+		score = PlayerPrefs.GetInt("score");
+	}
 
 	void OnGUI() {
 		GUI.skin = skin;
