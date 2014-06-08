@@ -11,10 +11,10 @@ public class TitleScreen : MonoBehaviour {
 	void OnGUI () {
 		int sw = Screen.width;
 		int sh = Screen.height;
-		Rect startButton = new Rect(Screen.width / 4,Screen.height / 2, Screen.width/2, Screen.height / 4);
-		Rect howToButton = new Rect(Screen.width / 4,Screen.height / 2, Screen.width/2, Screen.height / 4);
-		Rect scoreButton = new Rect(Screen.width / 4,Screen.height / 2, Screen.width/2, Screen.height / 4);
-		Rect optionButton = new Rect(Screen.width / 4,Screen.height / 2, Screen.width/2, Screen.height / 4);
+		Rect startButton = new Rect(sw / 4,sh / 2, sw / 2, sh / 8);
+		Rect howToButton = new Rect(sw / 4.5f,sh / 1.5f, sw / 6, sh / 8);
+		Rect scoreButton = new Rect(sw / 3,sh / 1.5f, sw / 6, sh / 8);
+		Rect optionButton = new Rect(sw / 1.75f,sh / 1.5f, sw / 6, sh / 8);
 		if (GUI.Button(startButton, "はじめる")) {
 			Application.LoadLevel("Stage1");
 		}
@@ -27,6 +27,5 @@ public class TitleScreen : MonoBehaviour {
 		if (GUI.Button(optionButton,"設定")) {
 			Application.LoadLevel("Option");
 		}
-
 	}
 }
