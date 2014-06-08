@@ -2,14 +2,13 @@
 using System.Collections;
 
 public class GameStarter : MonoBehaviour {
-	//
 	public GUISkin skin;
 	public AudioClip countdownSE;
 
 	float timer = 3.5f;
 
 	void Start () {
-		// スリーカウントの3.0秒と、開始時の余裕を持たせるための0.5秒。
+		// スリーカウントの3.0秒と、開始時の余裕を持たせるための0.5秒
 		timer = 3.5f;
 		audio.PlayOneShot(countdownSE);
 	}
@@ -20,6 +19,7 @@ public class GameStarter : MonoBehaviour {
 		if (timer <= 0.0) {
 			//BroadcastMessage("StartGame");
 			GameObject.FindWithTag("Player").BroadcastMessage("StartGame");
+			GameObject.FindWithTag("GameController").BroadcastMessage("StartGame");
 			//GameObject.FindWithTag("MoveObject").BroadcastMessage("StartGame");
 			enabled = false;
 		}

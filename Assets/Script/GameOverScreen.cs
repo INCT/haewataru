@@ -47,6 +47,7 @@ public class GameOverScreen : MonoBehaviour {
 			bool isClicked = GUI.Button(new Rect(sw/4, sh/2,sw/2,sh/4),"タイトル画面へ");
 			if (isClicked) {
 				Application.LoadLevel("Title");
+				Destroy(this.gameObject);
 			}
 		}
 	}

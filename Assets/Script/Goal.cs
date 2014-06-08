@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour {
 		if(other.gameObject.tag == "PlayerModel" && cleared == false) {
 			cleared = true;
 			GameObject.FindWithTag("Player").BroadcastMessage("Goal");
+			GameObject.FindWithTag("GameController").BroadcastMessage("Goal");
 		}
 	}
 	void OnTriggerExit(Collider other) {
