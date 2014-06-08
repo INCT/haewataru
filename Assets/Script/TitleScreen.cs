@@ -14,6 +14,7 @@ public class TitleScreen : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(sw/4,sh/2,sw/2,sh/2));
 		if (GUILayout.Button("はじめる",GUILayout.MinHeight(sh/6))) {
 			Application.LoadLevel("Stage1");
+			GameObject.FindWithTag("GameController").BroadcastMessage("Ready");
 		}
 		GUILayout.BeginHorizontal();
 		if (GUILayout.Button("遊び方",GUILayout.MinHeight(sh/6))) {

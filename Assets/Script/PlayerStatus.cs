@@ -42,8 +42,8 @@ public class PlayerStatus : MonoBehaviour {
 			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
 			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
 			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
-			enabled = false;
 			state ="Death";
+			enabled = false;
 		}
 	}
 
