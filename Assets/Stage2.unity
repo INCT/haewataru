@@ -1039,12 +1039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7a828be4d6bea49a4ef3e66e4c3cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plusFx: {fileID: 100000, guid: aace3903179a74aecb0c4d0fb7607ef5, type: 2}
-  minusFx: {fileID: 100008, guid: 01603b7302bd34f379cc7d1ef6b55a15, type: 2}
-  deathFx: {fileID: 100002, guid: 7cf17ed91cf254b5ab4b35d42b430b8a, type: 2}
-  plusSE: {fileID: 8300000, guid: 226c845c7b989a84a99e6708aeb7ac8e, type: 3}
-  minusSE: {fileID: 8300000, guid: 03a00fb5c799df440b58fb7765fd6292, type: 3}
-  deathSE: {fileID: 8300000, guid: 98b4bfc9a145ed141b341e16d1dae7fc, type: 3}
   skin: {fileID: 11400000, guid: 89e638d7e22b91c498aa089810a6af2b, type: 2}
 --- !u!82 &498104050
 AudioSource:
@@ -1418,7 +1412,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 724275449}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96699d24075434f1198e7cbf2b829356, type: 3}
   m_Name: 
