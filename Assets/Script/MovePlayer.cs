@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class MovePlayer : MonoBehaviour {
-	private static bool started = false;
+	public static bool started = false;
 	public float x = 0.0f;
 	public float y = 0.0f;
 	public float z = 0.0f;
@@ -82,7 +82,7 @@ public class MovePlayer : MonoBehaviour {
 		}
 	}
 	void EndGame() {
-		enabled = false;
+		started = false;
 	}
 
 }
