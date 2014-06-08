@@ -57,16 +57,21 @@
      <Compile Include="Assets\Script\MoveCircle.cs" />
      <Compile Include="Assets\Script\MovePlayer.cs" />
      <Compile Include="Assets\Script\ObjectCollision.cs" />
+     <Compile Include="Assets\Script\Option.cs" />
      <Compile Include="Assets\Script\PlayerFx.cs" />
      <Compile Include="Assets\Script\PlayerStatus.cs" />
      <Compile Include="Assets\Script\Record.cs" />
-     <Compile Include="Assets\Script\ScoreKeeper.cs" />
      <Compile Include="Assets\Script\StaticGameObject.cs" />
      <Compile Include="Assets\Script\TimeKeeper.cs" />
      <Compile Include="Assets\Script\TitleScreen.cs" />
+     <Compile Include="Assets\Script\Tutorial.cs" />
      <None Include="Assets\Models\Medieval_House\Info.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Elementals\!Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{4E0F479F-6A3D-031B-E0F8-427083A3C850}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

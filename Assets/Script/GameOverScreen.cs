@@ -26,7 +26,12 @@ public class GameOverScreen : MonoBehaviour {
 	}
 	void Score(int result) {
 		score = result;
-		PlayerPrefs.SetInt("score",score);
+		for (int i = 0; i < 5; i++) {
+			if (score > PlayerPrefs.GetInt("score"+i)) {
+				PlayerPrefs.SetInt("score"+i,score);
+				break;
+			}
+		}
 	}
 	void Windows(int result) {
 		windows = result;
