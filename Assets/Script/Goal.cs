@@ -17,7 +17,7 @@ public class Goal : MonoBehaviour {
 	void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag == "PlayerModel") {
 			//カメラフェードクラスを使用
-			CameraFade.StartAlphaFade(Color.white,false, 1f, 1f, () => {
+			CameraFade.StartAlphaFade(Color.white,false, 2f, 0f, () => {
 				Application.LoadLevel("Stage"+NextStageNum);
 				});
 		}
