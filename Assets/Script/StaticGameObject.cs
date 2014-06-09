@@ -2,7 +2,14 @@
 using System.Collections;
 
 public class StaticGameObject : MonoBehaviour {
+	private static bool  created =false;
 	void Awake () {
-		DontDestroyOnLoad(this);
+		if(!created){
+			DontDestroyOnLoad(this.gameObject);
+			created = true;
+		} else {
+			Destroy(this.gameObject);
+			created = false;
+		}
 	}
 }
