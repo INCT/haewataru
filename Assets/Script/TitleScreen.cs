@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class TitleScreen : MonoBehaviour {
+
+	public GameObject GameObjectPrefab;
 	void Update () {
 		if (Input.GetButtonDown("Jump")) {
 			Application.LoadLevel("Main");
@@ -14,7 +16,7 @@ public class TitleScreen : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(sw/4,sh/2,sw/2,sh/2));
 		if (GUILayout.Button("はじめる",GUILayout.MinHeight(sh/6))) {
 			Application.LoadLevel("Stage1");
-			GameObject.FindWithTag("GameController").BroadcastMessage("Ready");
+			Instantiate(GameObjectPrefab,new Vector3(0,0,0), Quaternion.identity);
 		}
 		GUILayout.BeginHorizontal();
 		if (GUILayout.Button("遊び方",GUILayout.MinHeight(sh/6))) {
