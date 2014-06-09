@@ -36,8 +36,4 @@ public class GameStarter : MonoBehaviour {
 		GUI.color = new Color(1, 1, 1, timer - Mathf.FloorToInt(timer));
 		GUI.Label(rect, text, "count");
 	}
-	
-	void Ready() {
-		enabled = true;
-	}
 }
