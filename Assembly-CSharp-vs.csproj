@@ -64,6 +64,7 @@
      <Compile Include="Assets\Script\Screen\PlayerFx.cs" />
      <Compile Include="Assets\Script\Screen\PlayerStatus.cs" />
      <Compile Include="Assets\Script\Screen\Record.cs" />
+     <Compile Include="Assets\Script\Screen\StartButton.cs" />
      <Compile Include="Assets\Script\Screen\TitleScreen.cs" />
      <Compile Include="Assets\Script\Screen\Tutorial.cs" />
      <None Include="Assets\Models\Medieval_House\Info.txt" />

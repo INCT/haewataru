@@ -13,11 +13,7 @@ public class TitleScreen : MonoBehaviour {
 	void OnGUI () {
 		int sw = Screen.width;
 		int sh = Screen.height;
-		GUILayout.BeginArea(new Rect(sw/4,sh/2,sw/2,sh/2));
-		if (GUILayout.Button("はじめる",GUILayout.MinHeight(sh/6))) {
-			Application.LoadLevel("Stage1");
-			Instantiate(GameObjectPrefab,new Vector3(0,0,0), Quaternion.identity);
-		}
+		GUILayout.BeginArea(new Rect(sw/4,sh/2 + 150,sw/2,sh/2));
 		GUILayout.BeginHorizontal();
 		if (GUILayout.Button("遊び方",GUILayout.MinHeight(sh/6))) {
 			Application.LoadLevel("Tutorial");
