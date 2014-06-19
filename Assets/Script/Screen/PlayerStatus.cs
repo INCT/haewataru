@@ -7,18 +7,22 @@ public class PlayerStatus : MonoBehaviour {
 	//プレイヤーのステータス
 	string state;
 	float time;
+	public int life = 100;
+	public float lifeRate = 0.5f;
 	int score;
 	int windows;
 
 	void Update () {
 		time += Time.deltaTime;
+		life -= Mathf.FloorToInt(Time.deltaTime * lifeRate);
 	}
 	void OnGUI() {
 		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
 		GUI.Label(new Rect(0,0, sw / 2,sh/ 4),"SCORE: "+ score.ToString(), "Score");
-		GUI.Label(new Rect(0, 0, sw, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
+		//GUI.Label(new Rect(0, 0, sw, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
+		GUI.Label(new Rect(0, 0, sw, sh), "Life: " + Mathf.Ceil(time).ToString(), "Time");
 	}
 	void PlusScore(int amount) {
 		state = "Plus";
