@@ -57,6 +57,7 @@
      <Compile Include="Assets\Script\GameController\TimeKeeper.cs" />
      <Compile Include="Assets\Script\ObjectController\CameraControll.cs" />
      <Compile Include="Assets\Script\ObjectController\Generator.cs" />
+     <Compile Include="Assets\Script\ObjectController\Item.cs" />
      <Compile Include="Assets\Script\ObjectController\MoveCircle.cs" />
      <Compile Include="Assets\Script\ObjectController\MovePlayer.cs" />
      <Compile Include="Assets\Script\ObjectController\ObjectCollision.cs" />
