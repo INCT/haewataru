@@ -3,7 +3,9 @@ using System.Collections;
 
 public class TitleScreen : MonoBehaviour {
 
-	public Texture2D score_im; 
+	public Texture2D score_im;
+	public Texture2D option_im;
+	public Texture2D tutorial_im; 
 
 	public GameObject GameObjectPrefab;
 	void Update () {
@@ -20,15 +22,15 @@ public class TitleScreen : MonoBehaviour {
 	void OnGUI () {
 		int sw = Screen.width;
 		int sh = Screen.height;
-		GUILayout.BeginArea(new Rect(sw/4,sh/2 + 150,sw/2,sh/2));
+		GUILayout.BeginArea(new Rect(0,sh/2 + 150,sw,sh/2));
 		GUILayout.BeginHorizontal();
-		if (GUILayout.Button("遊び方",GUILayout.MinHeight(sh/6))) {
+		if (GUI.Button( new Rect(sw/8*1,0,sw/4,sh/6), tutorial_im)) {
 			Application.LoadLevel("Tutorial");
 		}
-		if (GUI.Button( new Rect(sh/6,sh/6,sh/4,sh/6),score_im)) {
+		if (GUI.Button( new Rect(sw/8*3,0,sw/4,sh/6), score_im)) {
 			Application.LoadLevel("Record");
 		}
-		if (GUILayout.Button("設定",GUILayout.MinHeight(sh/6))) {
+		if (GUI.Button( new Rect(sw/8*5,0,sw/4,sh/6), option_im)) {
 			Application.LoadLevel("Option");
 		}
 		GUILayout.EndHorizontal();
