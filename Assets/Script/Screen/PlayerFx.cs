@@ -71,7 +71,7 @@ public class PlayerFx : MonoBehaviour {
 	}
 	void ApplyDamage() {
 		if (state != "Death") {
-			rigidbody.AddForce(Vector3.back * 15.0f, ForceMode.Impulse);
+			this.rigidbody.AddForce(Vector3.back * 100f, ForceMode.VelocityChange);
 			Instantiate(deathFx, transform.position, transform.rotation);
 			audio.PlayOneShot(deathSE);
 			enabled = false;

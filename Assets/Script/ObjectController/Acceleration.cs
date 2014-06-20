@@ -11,11 +11,11 @@ public class Acceleration : MonoBehaviour
 	
 	// Use this for initialization
 	void Start()
-	{
+	{/*
 		if(SystemInfo.supportsGyroscope)
 		{
 			Input.gyro.enabled = true;
-		}
+		}*/
 		//フォント生成
 		this.labelStyle = new GUIStyle();
 		this.labelStyle.fontSize = Screen.height / 22;
@@ -36,10 +36,10 @@ public class Acceleration : MonoBehaviour
 		// Input.gyro.attitude.y;
 		this.acceleration = Input.acceleration;
 
-		transform.Rotate(this.acceleration.x,0,0);
-		transform.Rotate(0,this.acceleration.z, 0);
+		transform.Rotate(0,this.acceleration.x*2,0);
+		transform.Rotate(-3*this.acceleration.z, 0, 0);
 
-		transform.Translate (0,0,0.8f);
+		transform.Translate (0,0,1.0f);
 	}
 
 	void OnGUI()
