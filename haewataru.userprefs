@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Goal.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Screen/TitleScreen.cs">
     <Files>
-      <File FileName="Assets/Script/Goal.cs" Line="6" Column="15" />
+      <File FileName="Assets/Script/Screen/TitleScreen.cs" Line="28" Column="42" />
+      <File FileName="Assets/Script/ObjectController/CameraControll.cs" Line="10" Column="3" />
+      <File FileName="Assets/Script/Screen/Record.cs" Line="6" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
