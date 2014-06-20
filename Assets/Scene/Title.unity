@@ -401,6 +401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score_im: {fileID: 2800000, guid: 3708eab6d73254a21901b34ccc8b1a55, type: 3}
+  option_im: {fileID: 2800000, guid: cfb78ebf6984847b2ba03d954a86ee6a, type: 3}
+  tutorial_im: {fileID: 2800000, guid: a380d4aa7fab349beaaf0141f0370a3a, type: 3}
   GameObjectPrefab: {fileID: 100000, guid: c08b0e9d6c49c6f45b6e7aceb8adc562, type: 2}
 --- !u!4 &423586530
 Transform:

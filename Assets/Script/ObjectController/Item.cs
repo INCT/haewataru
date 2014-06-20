@@ -13,7 +13,8 @@ public class Item : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "PlayerModel" && cleared == false) {
 				cleared = true;
-				GameObject.FindWithTag("Player").BroadcastMessage("LifePlus",amount);
+				GameObject.FindWithTag("Player").BroadcastMessage("ScorePlus",amount);
+				Object.Destroy(this);
 
 		}
 	}

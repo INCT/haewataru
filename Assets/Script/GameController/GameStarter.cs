@@ -20,7 +20,10 @@ public class GameStarter : MonoBehaviour {
 			//BroadcastMessage("StartGame");
 			GameObject.FindWithTag("Player").BroadcastMessage("StartGame");
 			GameObject.FindWithTag("GameController").BroadcastMessage("StartGame");
-			//GameObject.FindWithTag("MoveObject").BroadcastMessage("StartGame");
+			if (GameObject.FindWithTag("MoveObject")) {
+				GameObject.FindWithTag("MoveObject").BroadcastMessage("StartGame");
+			}
+
 			enabled = false;
 		}
 	}
