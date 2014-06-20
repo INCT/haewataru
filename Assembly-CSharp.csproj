@@ -52,6 +52,7 @@
      <Compile Include="Assets\Script\GameController\GameOverScreen.cs" />
      <Compile Include="Assets\Script\GameController\GameStarter.cs" />
      <Compile Include="Assets\Script\GameController\Goal.cs" />
+     <Compile Include="Assets\Script\GameController\Item.cs" />
      <Compile Include="Assets\Script\GameController\Loser.cs" />
      <Compile Include="Assets\Script\GameController\StaticGameObject.cs" />
      <Compile Include="Assets\Script\GameController\TimeKeeper.cs" />
