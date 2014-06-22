@@ -7,22 +7,34 @@ public class PlayerStatus : MonoBehaviour {
 	//プレイヤーのステータス
 	string state;
 	float time;
-	public int life = 100;
-	public float lifeRate = 0.5f;
+	public float life = 100f;
 	int score;
 	int windows;
 
 	void Update () {
 		time += Time.deltaTime;
-		life -= Mathf.FloorToInt(Time.deltaTime * lifeRate);
+		life -= Time.deltaTime;
+		if (life < 0 && state != "Death") {
+			GameObject.FindWithTag("Player").BroadcastMessage("EndGame");
+			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
+			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
+			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
+			state ="Death";
+			enabled = false;
+		}
 	}
 	void OnGUI() {
 		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
 		GUI.Label(new Rect(0,0, sw / 2,sh/ 4),"SCORE: "+ score.ToString(), "Score");
-		//GUI.Label(new Rect(0, 0, sw, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
-		GUI.Label(new Rect(0, 0, sw, sh), "Life: " + Mathf.Ceil(time).ToString(), "Time");
+		GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
+		GUI.Label(new Rect(0, 0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+	}
+	void GetItem(int amount) {
+		state = "Plus";
+		life += amount;
+		state = "";
 	}
 	void PlusScore(int amount) {
 		state = "Plus";
