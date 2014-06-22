@@ -53,6 +53,7 @@
      <Compile Include="Assets\Script\GameController\GameStarter.cs" />
      <Compile Include="Assets\Script\GameController\Goal.cs" />
      <Compile Include="Assets\Script\GameController\Loser.cs" />
+     <Compile Include="Assets\Script\GameController\PlayerStatus.cs" />
      <Compile Include="Assets\Script\GameController\StaticGameObject.cs" />
      <Compile Include="Assets\Script\GameController\TimeKeeper.cs" />
      <Compile Include="Assets\Script\ObjectController\Acceleration.cs" />
@@ -64,7 +65,6 @@
      <Compile Include="Assets\Script\ObjectController\ObjectCollision.cs" />
      <Compile Include="Assets\Script\Screen\Option.cs" />
      <Compile Include="Assets\Script\Screen\PlayerFx.cs" />
-     <Compile Include="Assets\Script\Screen\PlayerStatus.cs" />
      <Compile Include="Assets\Script\Screen\Record.cs" />
      <Compile Include="Assets\Script\Screen\StartButton.cs" />
      <Compile Include="Assets\Script\Screen\TitleScreen.cs" />

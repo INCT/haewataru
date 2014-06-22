@@ -54,6 +54,13 @@ public class PlayerFx : MonoBehaviour {
 			GUI.Label(rect,"GOAL","message");
 		}
 	}
+	void GetItem(int amount) {
+		state = "Plus";
+		Instantiate(plusFx, transform.position, transform.rotation);
+		audio.PlayOneShot(plusSE);
+		StartCoroutine("Processing");
+		state = "";
+	}
 	void PlusScore(int amount) {
 		state = "Plus";
 		Instantiate(plusFx, transform.position, transform.rotation);
