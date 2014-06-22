@@ -4,18 +4,14 @@ using System.Collections;
 public class Item : MonoBehaviour {
 	public GameObject itemFx;
 	public AudioClip itemSE;
-	public int amount;
-	public char itemType = 'A';
-	bool cleared;
+	public int amount = 100;
 	void Start () {
-		cleared = false;
 	}
 	void OnTriggerEnter(Collider other) {
-		if(other.gameObject.tag == "PlayerModel" && cleared == false) {
-				cleared = true;
-				GameObject.FindWithTag("Player").BroadcastMessage("ScorePlus",amount);
-				Object.Destroy(this);
-
+		if(other.gameObject.tag == "PlayerModel") {
+				GameObject.FindWithTag("Player").BroadcastMessage("GetItem",amount);
+				GameObject.FindWithTag("GameController").BroadcastMessage("GetItem",amount);
+				Object.Destroy(gameObject);
 		}
 	}
 }
