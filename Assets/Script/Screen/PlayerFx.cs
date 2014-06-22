@@ -20,30 +20,46 @@ public class PlayerFx : MonoBehaviour {
 		int sw = Screen.width;
 		int sh = Screen.height;
 		Rect rect = new Rect(0,0.2f * sh, sw, 0.3f * sh);
-		float alpha = 1.0f;
-		//Mathf.Clamp01() 0 から1 の値を返す
-		float dim = Mathf.Clamp01(Time.deltaTime);
 
 		if (state == "Plus") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"POINT UP","masseage");
 		}
 		if (state == "Miunus") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"POINT DOWN","masseage");
 		}		
 		if (state == "Death") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"Death","message");
 		}
 		if (state == "Goal") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"GOAL","message");
 		}
+	}
+	void GetItem(int amount) {
+		state = "Plus";
+		Instantiate(plusFx, transform.position, transform.rotation);
+		audio.PlayOneShot(plusSE);
+		StartCoroutine("Processing");
+		state = "";
 	}
 	void PlusScore(int amount) {
 		state = "Plus";
@@ -71,12 +87,15 @@ public class PlayerFx : MonoBehaviour {
 	}
 	void ApplyDamage() {
 		if (state != "Death") {
-			rigidbody.AddForce(Vector3.back * 15.0f, ForceMode.Impulse);
+			this.rigidbody.AddForce(Vector3.back * 100f, ForceMode.VelocityChange);
 			Instantiate(deathFx, transform.position, transform.rotation);
 			audio.PlayOneShot(deathSE);
 			enabled = false;
 			state ="Death";
 		}
+	}
+	void Fall() {
+		this.rigidbody.AddForce(Vector3.down * 10f, ForceMode.VelocityChange);
 	}
 	IEnumerator KillDelay() {
 		yield return new WaitForSeconds(0.4f);
