@@ -20,26 +20,35 @@ public class PlayerFx : MonoBehaviour {
 		int sw = Screen.width;
 		int sh = Screen.height;
 		Rect rect = new Rect(0,0.2f * sh, sw, 0.3f * sh);
-		float alpha = 1.0f;
-		//Mathf.Clamp01() 0 から1 の値を返す
-		float dim = Mathf.Clamp01(Time.deltaTime);
 
 		if (state == "Plus") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"POINT UP","masseage");
 		}
 		if (state == "Miunus") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"POINT DOWN","masseage");
 		}		
 		if (state == "Death") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"Death","message");
 		}
 		if (state == "Goal") {
+			float alpha = 1.0f;
+			//Mathf.Clamp01() 0 から1 の値を返す
+			float dim = Mathf.Clamp01(Time.deltaTime);
 			alpha -= dim;
 			GUI.color = new Color(0,1,0, alpha);
 			GUI.Label(rect,"GOAL","message");

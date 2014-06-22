@@ -10,6 +10,7 @@ public class Item : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.tag == "PlayerModel") {
 				GameObject.FindWithTag("Player").BroadcastMessage("PlusScore",amount);
+				GameObject.FindWithTag("GameController").BroadcastMessage("PlusScore",amount);
 				Object.Destroy(gameObject);
 		}
 	}
