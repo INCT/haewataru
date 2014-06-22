@@ -7,19 +7,28 @@ public class PlayerStatus : MonoBehaviour {
 	//プレイヤーのステータス
 	string state;
 	float time;
-	public float life = 100f;
+	public static float lifeMax = 10f;
+	float life;
 	int score;
 	int windows;
+
+	void Start() {
+		life = lifeMax;
+	}
 
 	void Update () {
 		time += Time.deltaTime;
 		life -= Time.deltaTime;
 		if (life < 0 && state != "Death") {
+			state ="Death";
+			GameObject.FindWithTag("Player").BroadcastMessage("Fall");
+		}
+
+		if (state == "Death") {
 			GameObject.FindWithTag("Player").BroadcastMessage("EndGame");
 			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
 			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
 			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
-			state ="Death";
 			enabled = false;
 		}
 	}
@@ -33,7 +42,11 @@ public class PlayerStatus : MonoBehaviour {
 	}
 	void GetItem(int amount) {
 		state = "Plus";
-		life += amount;
+		if(lifeMax - life < amount) {
+			life = lifeMax;
+		} else {
+			life += amount;
+		}
 		state = "";
 	}
 	void PlusScore(int amount) {
@@ -54,12 +67,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 	void ApplyDamage() {
 		if (state != "Death") {
-			GameObject.FindWithTag("Player").BroadcastMessage("EndGame");
-			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
-			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
-			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
 			state ="Death";
-			enabled = false;
 		}
 	}
 

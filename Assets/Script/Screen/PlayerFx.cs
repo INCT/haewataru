@@ -94,6 +94,9 @@ public class PlayerFx : MonoBehaviour {
 			state ="Death";
 		}
 	}
+	void Fall() {
+		this.rigidbody.AddForce(Vector3.down * 10f, ForceMode.VelocityChange);
+	}
 	IEnumerator KillDelay() {
 		yield return new WaitForSeconds(0.4f);
 	}
