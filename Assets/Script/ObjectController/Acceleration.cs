@@ -39,7 +39,7 @@ public class Acceleration : MonoBehaviour
 		transform.Rotate(0,this.acceleration.x*2,0);
 		transform.Rotate(-3*this.acceleration.z, 0, 0);
 
-		transform.Translate (0,0,1.0f);
+		transform.Translate (0,0,1.4f);
 	}
 
 	void OnGUI()
