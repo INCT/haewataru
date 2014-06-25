@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/Goal.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/PlayerStatus.cs">
     <Files>
-      <File FileName="Assets/Script/ObjectController/MovePlayer.cs" Line="65" Column="7" />
-      <File FileName="Assets/Script/ObjectController/Acceleration.cs" Line="40" Column="41" />
+      <File FileName="Assets/Script/GameController/PlayerStatus.cs" Line="45" Column="19" />
+      <File FileName="Assets/Script/ObjectController/MovePlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ObjectController/Acceleration.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/GameController/Goal.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

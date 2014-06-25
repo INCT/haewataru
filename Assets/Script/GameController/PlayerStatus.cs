@@ -7,7 +7,7 @@ public class PlayerStatus : MonoBehaviour {
 	//プレイヤーのステータス
 	string state;
 	float time;
-	public static float lifeMax = 10f;
+	public float lifeMax = 10f;
 	float life;
 	int score;
 	int windows;
@@ -42,6 +42,7 @@ public class PlayerStatus : MonoBehaviour {
 	}
 	void GetItem(int amount) {
 		state = "Plus";
+		score += amount;
 		if(lifeMax - life < amount) {
 			life = lifeMax;
 		} else {
