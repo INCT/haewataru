@@ -7,7 +7,7 @@ public class MovePlayer : MonoBehaviour {
 	public float y = 0.0f;
 	public float z = 0.0f;
 
-	string touchInfo = "0";
+	string touchInfo = "";
 
 	void OnGUI(){
 		GUI.Label (new Rect (10, 10, 300, 300), touchInfo);
