@@ -56,6 +56,7 @@
      <Compile Include="Assets\Script\GameController\PlayerStatus.cs" />
      <Compile Include="Assets\Script\GameController\StaticGameObject.cs" />
      <Compile Include="Assets\Script\GameController\TimeKeeper.cs" />
+     <Compile Include="Assets\Script\GameController\isDiving.cs" />
      <Compile Include="Assets\Script\ObjectController\Acceleration.cs" />
      <Compile Include="Assets\Script\ObjectController\CameraControll.cs" />
      <Compile Include="Assets\Script\ObjectController\Generator.cs" />

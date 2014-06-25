@@ -18,7 +18,11 @@ public class GameStarter : MonoBehaviour {
 
 		if (timer <= 0.0) {
 			//BroadcastMessage("StartGame");
-			GameObject.FindWithTag("Player").BroadcastMessage("StartGame");
+			if(PlayerPrefs.GetString ("isDiving") == "OFF")
+				GameObject.FindWithTag("Player").BroadcastMessage("StartGame1");
+			else if (PlayerPrefs.GetString ("isDiving") == "ON")
+				GameObject.FindWithTag("Player").BroadcastMessage("StartGame2");
+
 			GameObject.FindWithTag("GameController").BroadcastMessage("StartGame");
 			if (GameObject.FindWithTag("MoveObject")) {
 				GameObject.FindWithTag("MoveObject").BroadcastMessage("StartGame");

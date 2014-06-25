@@ -13,8 +13,9 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameManeger
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin: {fileID: 11400000, guid: 89e638d7e22b91c498aa089810a6af2b, type: 2}
-  lifeMax: 20
+  lifeMax: 100
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,6 +139,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skin: {fileID: 11400000, guid: 89e638d7e22b91c498aa089810a6af2b, type: 2}
   countdownSE: {fileID: 8300000, guid: 5dd204722eab3ff41bd3f2febe6412c2, type: 3}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b37e49df16d648c8b51239d42ed71b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
