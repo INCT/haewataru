@@ -62,7 +62,7 @@ public class MovePlayer : MonoBehaviour {
 				transform.Rotate(0, y, 0);
 				transform.Rotate(x, 0, 0);
 
-				transform.Translate (0,0,2.0f);
+				transform.Translate (0,0,3.0f);
 			}
 			//RotateAngle ();
 
@@ -76,7 +76,8 @@ public class MovePlayer : MonoBehaviour {
 		Debug.Log (transform.rotation.z);
 	}
 
-	void StartGame() {
+	void StartGame1() {
+		Debug.Log ("1");
 		if (!started) {
 			started = true;
 		}

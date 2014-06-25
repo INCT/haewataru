@@ -7,7 +7,7 @@ public class PlayerStatus : MonoBehaviour {
 	//プレイヤーのステータス
 	string state;
 	float time;
-	public float lifeMax = 10f;
+	public float lifeMax = 100f;
 	float life;
 	int score;
 	int windows;
@@ -36,9 +36,11 @@ public class PlayerStatus : MonoBehaviour {
 		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
-		GUI.Label(new Rect(0,0, sw / 2,sh/ 4),"SCORE: "+ score.ToString(), "Score");
-		GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
-		GUI.Label(new Rect(0, 0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+		GUI.Label(new Rect(0,0, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
+		GUI.Label(new Rect(sw/2,0, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
+		/*GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");*/
+		GUI.Label(new Rect(0, sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+		GUI.Label(new Rect(sw/2,sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
 	}
 	void GetItem(int amount) {
 		state = "Plus";

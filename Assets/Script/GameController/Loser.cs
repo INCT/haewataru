@@ -19,9 +19,9 @@ public class Loser : MonoBehaviour {
 		transform.localPosition.y = target.transform.localPosition.y;
 		transform.localPosition.z = target.transform.localPosition.z + 1;*/
 	}
-	void EndGame() {
+	void EndGame() {/*
 		gameObject.renderer.enabled = true;
 		GameObject maincamera = GameObject.Find ("Main Camera");
 		transform.Translate (maincamera.transform.localPosition.x, maincamera.transform.localPosition.y - 180, maincamera.transform.localPosition.z + 40);
-	}
+	*/}
 }

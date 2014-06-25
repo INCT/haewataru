@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Acceleration : MonoBehaviour
 {
+	public static bool started = false;
 	
 	/// <summary>加速度？傾き？</summary>
 	private Vector3 acceleration;
@@ -34,14 +35,16 @@ public class Acceleration : MonoBehaviour
 		}
 */
 		// Input.gyro.attitude.y;
-		this.acceleration = Input.acceleration;
+		if (started) {
+						this.acceleration = Input.acceleration;
 
-		transform.Rotate(0,this.acceleration.x*2,0);
-		transform.Rotate(-3*this.acceleration.z, 0, 0);
+						transform.Rotate (0, this.acceleration.x * 2, 0);
+						transform.Rotate (-3 * this.acceleration.z, 0, 0);
 
-		transform.Translate (0,0,1.4f);
+						transform.Translate (0, 0, 2.0f);
+				}
 	}
-
+	/*
 	void OnGUI()
 	{
 		if (acceleration != null)
@@ -77,5 +80,16 @@ public class Acceleration : MonoBehaviour
 				GUI.Label(new Rect(x, y, w, h), text, this.labelStyle);
 			}
 		}
+	}*/
+
+	void StartGame2() {
+		Debug.Log ("2");
+		if (!started) {
+			started = true;
+		}
+	}
+
+	void EndGame() {
+		started = false;
 	}
 }
