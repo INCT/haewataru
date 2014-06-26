@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class GameStarter : MonoBehaviour {
-	public GUISkin skin;
+
+	public GUISkin skinNormal;
+	public GUISkin skinDive;
 	public AudioClip countdownSE;
 
 	float timer = 3.5f;
@@ -33,14 +35,23 @@ public class GameStarter : MonoBehaviour {
 	}
 	void OnGUI() {
 		if (timer > 3.0 || timer <= 0.0) return;
-		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
-		Rect rect = new Rect(0, sh / 4, sw, sh / 2);
-		// タイマーを繰り上げで整数に変換し、文字列へ変換する。
-		string text = Mathf.CeilToInt(timer).ToString();
-		// タイマーの小数点部分のみを切り出し、各カウントにおけるアルファ値のフェードアウトを表現する。
-		GUI.color = new Color(1, 1, 1, timer - Mathf.FloorToInt(timer));
-		GUI.Label(rect, text, "count");
+		if (PlayerPrefs.GetString ("isDiving") == "OFF") {
+			GUI.skin = skinNormal;
+			// タイマーを繰り上げで整数に変換し、文字列へ変換
+			string text = Mathf.CeilToInt(timer).ToString();
+			// タイマーの小数点部分のみを切り出し、各カウントにおけるアルファ値のフェードアウト
+			GUI.color = new Color(1, 1, 1, timer - Mathf.FloorToInt(timer));
+			GUI.Label(new Rect(0, sh / 4, sw, sh / 2), text, "count");
+		} else {
+			GUI.skin = skinDive;
+			// タイマーを繰り上げで整数に変換し、文字列へ変換
+			string text = Mathf.CeilToInt(timer).ToString();
+			// タイマーの小数点部分のみを切り出し、各カウントにおけるアルファ値のフェードアウト
+			GUI.color = new Color(1, 1, 1, timer - Mathf.FloorToInt(timer));
+			GUI.Label(new Rect(-sw/4, sh / 4, sw, sh / 2), text, "count");
+			GUI.Label(new Rect(sw/4, sh / 4, sw, sh / 2), text, "count");
+		}
 	}
 }
