@@ -7,7 +7,7 @@ public class MovePlayer : MonoBehaviour {
 	public float y = 0.0f;
 	public float z = 0.0f;
 
-	string touchInfo = "0";
+	string touchInfo = "";
 
 	void OnGUI(){
 		GUI.Label (new Rect (10, 10, 300, 300), touchInfo);
@@ -16,6 +16,11 @@ public class MovePlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(started) {
+			touchInfo = "Screen:"+Screen.width+"*"+Screen.height+"\n";
+			if(Input.GetKey(KeyCode.S)){
+				return;
+			}
+
 			if (Input.GetKey(KeyCode.RightArrow)) 
 				y = 2.0f;
 
