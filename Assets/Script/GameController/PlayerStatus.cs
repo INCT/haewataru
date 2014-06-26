@@ -3,12 +3,13 @@ using System.Collections;
 
 public class PlayerStatus : MonoBehaviour {
 	//Skin
-	public GUISkin skin;
+	public GUISkin skinNormal;
+	public GUISkin skinDive;
 	//プレイヤーのステータス
 	string state;
 	float time;
 	//体力の上限(初期値)
-	public float lifeMax = 100f;
+	public float lifeMax = 50f;
 	float life;
 	int score;
 	//通過した窓の数
@@ -36,14 +37,27 @@ public class PlayerStatus : MonoBehaviour {
 		}
 	}
 	void OnGUI() {
-		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
+<<<<<<< HEAD
 		GUI.Label(new Rect(0,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
 		GUI.Label(new Rect(sw/2,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
 		/*GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");*/
 		GUI.Label(new Rect(0, sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
 		GUI.Label(new Rect(sw/2,sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+=======
+		if(PlayerPrefs.GetString("isDiving") =="ON"){
+			GUI.skin = skinDive;
+			GUI.Label(new Rect(-sw/4,sh/4, sw, sh),"SCORE: "+ score.ToString(), "ScoreL");
+			GUI.Label(new Rect(sw/4,sh/4, sw, sh),"SCORE: "+ score.ToString(), "ScoreR");
+			GUI.Label(new Rect(-sw/4,sh/4, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "LifeL");
+			GUI.Label(new Rect(sw/4,sh/4, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "LifeR");
+		} else {
+			GUI.skin = skinNormal;
+			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score");
+			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life");
+		}
+>>>>>>> df405e4f4a910592d1e00445c80e43a155d3b0ff
 	}
 	void GetItem(int amount) {
 		state = "Plus";
