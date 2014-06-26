@@ -1,5 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/ObjectController/UnityChanControl.cs">
     <Files>
       <File FileName="Assets/Script/GameController/PlayerStatus.cs" Line="26" Column="4" />
@@ -7,6 +8,15 @@
       <File FileName="Assets/Script/ObjectController/UnityChanControl.cs" Line="18" Column="99" />
       <File FileName="Assets/Script/ObjectController/MovePlayer.cs" Line="54" Column="7" />
       <File FileName="Assets/Script/ObjectController/MoveCircle.cs" Line="9" Column="41" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/GameStarter.cs">
+    <Files>
+      <File FileName="Assets/Script/GameController/Goal.cs" Line="19" Column="8" />
+      <File FileName="Assets/Script/GameController/isDiving.cs" Line="25" Column="2" />
+      <File FileName="Assets/Script/GameController/GameStarter.cs" Line="22" Column="13" />
+      <File FileName="Assets/Script/Screen/TitleScreen.cs" Line="12" Column="2" />
+      <File FileName="Assets/Script/Screen/Tutorial.cs" Line="5" Column="4" />
+>>>>>>> bb917ee8b3126004bb4d49e525245eaf57f58f8f
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

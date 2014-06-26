@@ -2,8 +2,13 @@
 using System.Collections;
 
 public class Tutorial : MonoBehaviour {
-	public GUISkin skin;
+	//public GUISkin skin;
+	public GameObject GameObjectPrefab;
 
+	void Start(){
+		Instantiate(GameObjectPrefab,new Vector3(0,0,0), Quaternion.identity);
+	}
+	/*
 	void OnGUI() {
 		GUI.skin = skin;
 		int sw = Screen.width;
@@ -13,5 +18,5 @@ public class Tutorial : MonoBehaviour {
 			Application.LoadLevel("Title");
 		}
 		GUILayout.EndArea();
-	}
+	}*/
 }
