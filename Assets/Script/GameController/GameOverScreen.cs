@@ -43,14 +43,21 @@ public class GameOverScreen : MonoBehaviour {
 		int sh = Screen.height;
 
 		if (state == "End Game") {
-			Rect rect = new Rect(0, 0.2f * sh, sw, 0.3f * sh);
-			GUI.Label(rect, "GAME OVER!", "GameOver");
+			if(PlayerPrefs.GetString("isDiving") =="ON"){
+				GUI.Label(new Rect(-sw/4,sh/4, sw, sh), "GAME OVER!", "GameOver");
+				GUI.Label(new Rect(sw/4,sh/4, sw, sh), "GAME OVER!", "GameOver");
+			} else {
+				GUI.Label(new Rect(0, 0.2f * sh, sw, 0.3f * sh), "GAME OVER!", "GameOver");
+			}
 		}
 		if (state == "Show Score") {
-			Rect rect = new Rect(0, 0, sw, 0.3f * sh);
-			GUI.Label(rect, "通り抜けた窓:"+windows.ToString()+"枚"+"\nスコア: " + score.ToString(), "ShowScore");
-			bool isClicked = GUI.Button(new Rect(sw/4, sh/2,sw/2,sh/4),"タイトル画面へ");
-			if (isClicked) {
+			if(PlayerPrefs.GetString("isDiving") =="ON"){
+				GUI.Label(new Rect(-sw/4,sh/4, sw, sh), "通り抜けた窓:"+windows.ToString()+"枚"+"\nスコア: " + score.ToString(), "ShowScore");
+				GUI.Label(new Rect(sw/4,sh/4, sw, sh), "通り抜けた窓:"+windows.ToString()+"枚"+"\nスコア: " + score.ToString(), "ShowScore");
+			} else {
+				GUI.Label(new Rect(0, 0, sw, 0.3f * sh), "通り抜けた窓:"+windows.ToString()+"枚"+"\nスコア: " + score.ToString(), "ShowScore");
+			}
+			if (GUI.Button(new Rect(sw/4, sh/2,sw/2,sh/4),"タイトル画面へ")) {
 				Application.LoadLevel("Title");
 				Destroy(this.gameObject);
 			}
