@@ -3135,7 +3135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02420e30ae6e7409eb0cea74d7167197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextStageNum: 1
+  NextStageNum: 3
 --- !u!23 &433832087
 Renderer:
   m_ObjectHideFlags: 0
