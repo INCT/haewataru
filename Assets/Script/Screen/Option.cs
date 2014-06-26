@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Option : MonoBehaviour {
 	public GUISkin skin;
+	public Texture2D back_im;
+
 	string isDiving = "ON";
 
 	void OnGUI() {
@@ -31,9 +33,11 @@ public class Option : MonoBehaviour {
 		GUILayout.EndArea();
 
 		GUILayout.BeginArea(new Rect(sw/4,sh/4*3,sw/2,sh/3));
-		if (GUILayout.Button("戻る",GUILayout.MinHeight(sh/6))) {
+
+		if (GUILayout.Button(back_im,GUILayout.MinHeight(sh/6))) {
 			Application.LoadLevel("Title");
 		}
+
 		GUILayout.EndArea();
 	}
 }

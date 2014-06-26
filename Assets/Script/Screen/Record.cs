@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Record : MonoBehaviour {
 	public GUISkin skin;
+	public Texture2D back_im;
 	int[] score = new int[5];
 
 	void Awake() {
@@ -21,7 +22,7 @@ public class Record : MonoBehaviour {
 		for (int i = 0; i < score.Length; i++) {
 			GUILayout.Label("SCORE: "+ score[i].ToString(), "score");
 		}
-		if (GUILayout.Button("戻る",GUILayout.MinHeight(sh/6))) {
+		if (GUILayout.Button(back_im,GUILayout.MinHeight(sh/6))) {
 			Application.LoadLevel("Title");
 		}
 		GUILayout.EndArea();

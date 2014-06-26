@@ -4,6 +4,8 @@ using System.Collections;
 public class GameOverScreen : MonoBehaviour {
 
 	public GUISkin skin;
+	public Texture2D back_im;
+
 	int score;
 	int windows;
 	string state;
@@ -56,11 +58,17 @@ public class GameOverScreen : MonoBehaviour {
 				GUI.Label(new Rect(sw/4,sh/4, sw, sh), "通り抜けた窓:"+windows.ToString()+"枚"+"\nスコア: " + score.ToString(), "ShowScore");
 			} else {
 				GUI.Label(new Rect(0, 0, sw, 0.3f * sh), "通り抜けた窓:"+windows.ToString()+"枚"+"\nスコア: " + score.ToString(), "ShowScore");
-			}
+			}/*
 			if (GUI.Button(new Rect(sw/4, sh/2,sw/2,sh/4),"タイトル画面へ")) {
 				Application.LoadLevel("Title");
 				Destroy(this.gameObject);
+			}*/
+			GUILayout.BeginArea(new Rect(sw/4,sh/2,sw/2,sh/2));
+			if (GUILayout.Button(back_im,GUILayout.MinHeight(sh/6))) {
+				Application.LoadLevel("Title");
+				Destroy(this.gameObject);
 			}
+			GUILayout.EndArea();
 		}
 	}
 }
