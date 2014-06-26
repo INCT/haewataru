@@ -7,6 +7,7 @@ public class Option : MonoBehaviour {
 	public Texture2D dive_off;
 	Texture2D dive_im;
 	public Texture2D back_im;
+	public 
 
 	string isDiving = "ON";
 
@@ -46,7 +47,7 @@ public class Option : MonoBehaviour {
 		}
 		GUILayout.EndArea();
 
-		GUILayout.BeginArea(new Rect(sw/4,sh/5*4,sw/2,sh/4));
+		GUILayout.BeginArea(new Rect(sw/4,sh/5*4,sw/2,sh/5));
 
 		if (GUILayout.Button(back_im,GUILayout.MinHeight(sh/10))) {
 			Application.LoadLevel("Title");
