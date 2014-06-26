@@ -39,13 +39,7 @@ public class PlayerStatus : MonoBehaviour {
 	void OnGUI() {
 		int sw = Screen.width;
 		int sh = Screen.height;
-<<<<<<< HEAD
-		GUI.Label(new Rect(0,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
-		GUI.Label(new Rect(sw/2,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
-		/*GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");*/
-		GUI.Label(new Rect(0, sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
-		GUI.Label(new Rect(sw/2,sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
-=======
+
 		if(PlayerPrefs.GetString("isDiving") =="ON"){
 			GUI.skin = skinDive;
 			GUI.Label(new Rect(-sw/4,sh/4, sw, sh),"SCORE: "+ score.ToString(), "ScoreL");
@@ -57,7 +51,7 @@ public class PlayerStatus : MonoBehaviour {
 			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score");
 			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life");
 		}
->>>>>>> df405e4f4a910592d1e00445c80e43a155d3b0ff
+
 	}
 	void GetItem(int amount) {
 		state = "Plus";
