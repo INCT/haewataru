@@ -1,8 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Screen/Option.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/PlayerStatus.cs">
     <Files>
-      <File FileName="Assets/Script/Screen/Option.cs" Line="9" Column="16" />
+      <File FileName="Assets/Script/Screen/Option.cs" Line="28" Column="19" />
+      <File FileName="Assets/Script/Screen/Record.cs" Line="16" Column="16" />
+      <File FileName="Assets/Script/GameController/isDiving.cs" Line="7" Column="1" />
+      <File FileName="Assets/Script/GameController/GameStarter.cs" Line="24" Column="69" />
+      <File FileName="Assets/Script/ObjectController/Acceleration.cs" Line="44" Column="35" />
+      <File FileName="Assets/Script/ObjectController/MovePlayer.cs" Line="65" Column="31" />
+      <File FileName="Assets/Script/GameController/GameOverScreen.cs" Line="19" Column="24" />
+      <File FileName="Assets/Script/ObjectController/ObjectCollision.cs" Line="11" Column="1" />
+      <File FileName="Assets/Script/GameController/PlayerStatus.cs" Line="42" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
