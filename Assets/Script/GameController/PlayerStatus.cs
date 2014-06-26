@@ -41,10 +41,10 @@ public class PlayerStatus : MonoBehaviour {
 		int sh = Screen.height;
 		if(PlayerPrefs.GetString("isDinving") =="ON"){
 			GUI.skin = skinDive;
-			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score1");
-			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score2");
-			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life1");
-			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life2");
+			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "ScoreL");
+			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "ScoreR");
+			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "LifeL");
+			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "LifeR");
 		} else {
 			GUI.skin = skinNormal;
 			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score");
