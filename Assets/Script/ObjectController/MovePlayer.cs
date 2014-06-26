@@ -7,16 +7,16 @@ public class MovePlayer : MonoBehaviour {
 	public float y = 0.0f;
 	public float z = 0.0f;
 
-	string touchInfo = "";
-
+	//string touchInfo = "";
+	/*
 	void OnGUI(){
 		GUI.Label (new Rect (10, 10, 300, 300), touchInfo);
-	}
+	}*/
 
 	// Update is called once per frame
 	void Update () {
 		if(started) {
-			touchInfo = "Screen:"+Screen.width+"*"+Screen.height+"\n";
+			//touchInfo = "Screen:"+Screen.width+"*"+Screen.height+"\n";
 			if(Input.GetKey(KeyCode.S)){
 				return;
 			}
@@ -33,11 +33,11 @@ public class MovePlayer : MonoBehaviour {
 			if (Input.GetKey(KeyCode.DownArrow)) 
 				x = 2.0f;
 
-			touchInfo = "Screen:"+Screen.width+"*"+Screen.height+"\n";
-
+			//touchInfo = "Screen:"+Screen.width+"*"+Screen.height+"\n";
+			/*
 			for (int i=0;i<Input.touchCount; i++) {
 				touchInfo += i + " : x=" + Input.GetTouch (i).position.x + " y=" + Input.GetTouch (i).position.y + "\n";
-			} 
+			} */
 
 			if (Input.touchCount >= 2) {
 				int w = Screen.width;
@@ -59,7 +59,7 @@ public class MovePlayer : MonoBehaviour {
 					}
 				}
 
-				touchInfo += x0+","+y0+" & "+x1+","+y1+"\n";
+				//touchInfo += x0+","+y0+" & "+x1+","+y1+"\n";
 
 			}
 
