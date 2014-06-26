@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class isDiving : MonoBehaviour {
-	void Update () {
 
+	void Update () {
 		Camera Mono = GameObject.Find ("Main Camera Dive").GetComponent<Camera>();
 		Camera DivingR = GameObject.Find ("Main Camera Right").GetComponent<Camera> ();
 		Camera DivingL = GameObject.Find ("Main Camera Left").GetComponent<Camera> ();
