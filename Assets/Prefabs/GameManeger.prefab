@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e7a828be4d6bea49a4ef3e66e4c3cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 11400000, guid: 89e638d7e22b91c498aa089810a6af2b, type: 2}
-  lifeMax: 100
+  skinNormal: {fileID: 0}
+  skinDive: {fileID: 0}
+  lifeMax: 50
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
