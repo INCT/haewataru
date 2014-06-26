@@ -54,6 +54,7 @@
      <Compile Include="Assets\Script\GameController\Goal.cs" />
      <Compile Include="Assets\Script\GameController\Loser.cs" />
      <Compile Include="Assets\Script\GameController\PlayerStatus.cs" />
+     <Compile Include="Assets\Script\GameController\PlayerStatusTest.cs" />
      <Compile Include="Assets\Script\GameController\StaticGameObject.cs" />
      <Compile Include="Assets\Script\GameController\TimeKeeper.cs" />
      <Compile Include="Assets\Script\GameController\isDiving.cs" />
