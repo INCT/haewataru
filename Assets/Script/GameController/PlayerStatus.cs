@@ -7,9 +7,11 @@ public class PlayerStatus : MonoBehaviour {
 	//プレイヤーのステータス
 	string state;
 	float time;
-	public float lifeMax = 10f;
+	//体力の上限(初期値)
+	public float lifeMax = 100f;
 	float life;
 	int score;
+	//通過した窓の数
 	int windows;
 
 	void Start() {
@@ -27,7 +29,8 @@ public class PlayerStatus : MonoBehaviour {
 		if (state == "Death") {
 			GameObject.FindWithTag("Player").BroadcastMessage("EndGame");
 			GameObject.FindWithTag("GameController").BroadcastMessage("EndGame");
-			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score);
+			//スコアを計算
+			GameObject.FindWithTag("GameController").BroadcastMessage("Score", score+time);
 			GameObject.FindWithTag("GameController").BroadcastMessage("Windows", windows);
 			enabled = false;
 		}
@@ -36,9 +39,12 @@ public class PlayerStatus : MonoBehaviour {
 		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
-		GUI.Label(new Rect(0,0, sw / 2,sh/ 4),"SCORE: "+ score.ToString(), "Score");
-		GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");
-		GUI.Label(new Rect(0, 0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+		if(pra)
+		GUI.Label(new Rect(0,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
+		GUI.Label(new Rect(sw/2,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
+		/*GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");*/
+		GUI.Label(new Rect(0, sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+		GUI.Label(new Rect(sw/2,sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
 	}
 	void GetItem(int amount) {
 		state = "Plus";
