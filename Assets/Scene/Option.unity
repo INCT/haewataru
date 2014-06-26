@@ -401,6 +401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skin: {fileID: 11400000, guid: 89e638d7e22b91c498aa089810a6af2b, type: 2}
+  dive_on: {fileID: 2800000, guid: faed0a81aef6545d3aaa8f5d3920718d, type: 3}
+  dive_off: {fileID: 2800000, guid: c53ed9d96d8434a21ba98e8ddcf2eb61, type: 3}
   back_im: {fileID: 2800000, guid: 3387bf9bc4bf44147af37b6dbe78569b, type: 3}
 --- !u!4 &423586530
 Transform:
