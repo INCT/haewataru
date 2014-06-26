@@ -1,26 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Screen/TitleScreen.cs">
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/PlayerStatus.cs">
-    <Files>
-      <File FileName="Assets/Script/GameController/PlayerStatus.cs" Line="47" Column="3" />
-      <File FileName="Assets/Script/ObjectController/Acceleration.cs" Line="1" Column="1" />
-=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/GameStarter.cs">
->>>>>>> f01d678ff7fb8b35d8858bd1b5be5cdc3b4b1926
     <Files>
       <File FileName="Assets/Script/GameController/Goal.cs" Line="19" Column="8" />
-      <File FileName="Assets/Script/GameController/isDiving.cs" Line="39" Column="2" />
-      <File FileName="Assets/Script/GameController/GameStarter.cs" Line="1" Column="1" />
-<<<<<<< HEAD
-      <File FileName="Assets/Script/Screen/TitleScreen.cs" Line="30" Column="44" />
-      <File FileName="Assets/Script/Screen/StartButton.cs" Line="9" Column="3" />
-=======
->>>>>>> df405e4f4a910592d1e00445c80e43a155d3b0ff
->>>>>>> f01d678ff7fb8b35d8858bd1b5be5cdc3b4b1926
+      <File FileName="Assets/Script/GameController/isDiving.cs" Line="25" Column="2" />
+      <File FileName="Assets/Script/GameController/GameStarter.cs" Line="22" Column="13" />
+      <File FileName="Assets/Script/Screen/TitleScreen.cs" Line="12" Column="2" />
+      <File FileName="Assets/Script/Screen/Tutorial.cs" Line="5" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
