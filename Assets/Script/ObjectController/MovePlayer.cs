@@ -16,6 +16,11 @@ public class MovePlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(started) {
+			touchInfo = "Screen:"+Screen.width+"*"+Screen.height+"\n";
+			if(Input.GetKey(KeyCode.S)){
+				return;
+			}
+
 			if (Input.GetKey(KeyCode.RightArrow)) 
 				y = 2.0f;
 
