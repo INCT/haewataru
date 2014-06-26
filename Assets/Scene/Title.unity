@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f501c639c2842449f112be058e540f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start_im: {fileID: 2800000, guid: 8ab67cee8e0d44ca0886414adaba1033, type: 3}
   score_im: {fileID: 2800000, guid: 3708eab6d73254a21901b34ccc8b1a55, type: 3}
   option_im: {fileID: 2800000, guid: cfb78ebf6984847b2ba03d954a86ee6a, type: 3}
   tutorial_im: {fileID: 2800000, guid: a380d4aa7fab349beaaf0141f0370a3a, type: 3}
@@ -1630,7 +1631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!131 &1771231226
 GUITexture:
   m_ObjectHideFlags: 0
