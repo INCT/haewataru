@@ -9,7 +9,7 @@ public class PlayerStatus : MonoBehaviour {
 	string state;
 	float time;
 	//体力の上限(初期値)
-	public float lifeMax = 100f;
+	public float lifeMax = 50f;
 	float life;
 	int score;
 	//通過した窓の数
