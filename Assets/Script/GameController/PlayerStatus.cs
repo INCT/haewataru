@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PlayerStatus : MonoBehaviour {
 	//Skin
-	public GUISkin skin;
+	public GUISkin skinNormal;
+	public GUISkin skinDive;
 	//プレイヤーのステータス
 	string state;
 	float time;
@@ -36,15 +37,19 @@ public class PlayerStatus : MonoBehaviour {
 		}
 	}
 	void OnGUI() {
-		GUI.skin = skin;
 		int sw = Screen.width;
 		int sh = Screen.height;
-		if(pra)
-		GUI.Label(new Rect(0,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
-		GUI.Label(new Rect(sw/2,sh/3, sw/4,sh/10),"SCORE: "+ score.ToString(), "Score");
-		/*GUI.Label(new Rect(0, 0, sw /2, sh), "Time: " + Mathf.Ceil(time).ToString(), "Time");*/
-		GUI.Label(new Rect(0, sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
-		GUI.Label(new Rect(sw/2,sh/5, sw/4, sh/10), "Life: " + Mathf.Ceil(life).ToString(), "Time");
+		if(PlayerPrefs.GetString("isDinving") =="ON"){
+			GUI.skin = skinDive;
+			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score1");
+			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score2");
+			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life1");
+			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life2");
+		} else {
+			GUI.skin = skinNormal;
+			GUI.Label(new Rect(0,0, sw, sh),"SCORE: "+ score.ToString(), "Score");
+			GUI.Label(new Rect(0,0, sw, sh), "Life: " + Mathf.Ceil(life).ToString(), "Life");
+		}
 	}
 	void GetItem(int amount) {
 		state = "Plus";
