@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/GameStarter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Screen/TitleScreen.cs">
     <Files>
       <File FileName="Assets/Script/GameController/Goal.cs" Line="19" Column="8" />
-      <File FileName="Assets/Script/GameController/isDiving.cs" Line="7" Column="1" />
+      <File FileName="Assets/Script/GameController/isDiving.cs" Line="39" Column="2" />
       <File FileName="Assets/Script/GameController/GameStarter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Screen/TitleScreen.cs" Line="30" Column="44" />
+      <File FileName="Assets/Script/Screen/StartButton.cs" Line="9" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -4,6 +4,8 @@ using System.Collections;
 public class Tutorial : MonoBehaviour {
 	public GUISkin skin;
 
+
+	/*
 	void OnGUI() {
 		GUI.skin = skin;
 		int sw = Screen.width;
@@ -13,5 +15,5 @@ public class Tutorial : MonoBehaviour {
 			Application.LoadLevel("Title");
 		}
 		GUILayout.EndArea();
-	}
+	}*/
 }
