@@ -1,18 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench />
-=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameController/PlayerStatus.cs">
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Screen/Option.cs">
->>>>>>> FETCH_HEAD
     <Files>
-      <File FileName="Assets/Script/Screen/Option.cs" Line="9" Column="16" />
+      <File FileName="Assets/Script/GameController/PlayerStatus.cs" Line="47" Column="3" />
+      <File FileName="Assets/Script/ObjectController/Acceleration.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
->>>>>>> FETCH_HEAD
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
