@@ -3324,7 +3324,7 @@ Transform:
   m_PrefabInternal: {fileID: 341618686}
   m_GameObject: {fileID: 299136527}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 19.97789, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200549168}
@@ -3870,6 +3870,26 @@ Prefab:
     - target: {fileID: 400042, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400040, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.0936069489
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 19.97789
+      objectReference: {fileID: 0}
+    - target: {fileID: 400040, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ddff3e00c12258409908c895b992b49, type: 2}
@@ -6596,8 +6616,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 533461445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 466.465576, y: 32.6015396, z: -402.032013}
-  m_LocalScale: {x: 10, y: 28.7500477, z: 100}
+  m_LocalPosition: {x: 466.465576, y: 72.2746811, z: -402.032013}
+  m_LocalScale: {x: 10, y: 146.539993, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &533461447
@@ -18246,7 +18266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1981891586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18297,7 +18317,7 @@ Transform:
   m_PrefabInternal: {fileID: 341618686}
   m_GameObject: {fileID: 1981891585}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.48575211, z: -0}
+  m_LocalPosition: {x: 0, y: -.0936069489, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1595469922}
